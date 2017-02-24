@@ -2,7 +2,7 @@ from collections import Counter
 
 def top_words(words, scores):
     cnt = Counter()
-    with open("sample.txt") as rd:
+    with open("review_data.txt") as rd:
         for line in rd:
             movie_data = line.strip().split("|")
             if(int(movie_data[3]) in scores):
@@ -17,6 +17,7 @@ def top_words(words, scores):
 
 
 
-foo = top_words(10, [1,3])
+most_frequent = top_words(10, [1,2])
 
-print(foo)
+print(most_frequent)
+
